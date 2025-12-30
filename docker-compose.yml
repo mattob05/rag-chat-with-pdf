@@ -1,0 +1,14 @@
+services:
+  rag-app:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./vector_db:/app/vector_db  # Dzięki temu baza nie zniknie po restarcie
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia        # Przekazujemy Twoją kartę do Dockera
+              count: all
+              capabilities: [gpu]

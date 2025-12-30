@@ -1,0 +1,6 @@
+.venv/
+.vscode/
+vector_db/
+chroma.sqlite3
+temp_*.pdf
+__pycache__/
