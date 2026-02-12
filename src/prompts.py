@@ -1,6 +1,5 @@
 from langchain_core.prompts import PromptTemplate
 
-# Łączymy system prompt i human prompt w strukturę Phi-3
 def get_rag_prompt():
     template = """<|user|>
     You are a professional and helpful assistant specialized in document-based question answering. 
